@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -11,17 +11,17 @@
   
   
   
-  <meta name="description" content="什么是Hexo&amp;emsp;&amp;emsp;hexo是Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装Hexo的前提工作&amp;emsp;&amp;emsp;安装hexo必须要安装以下两个应用程序：  Node.js&amp;emsp;&amp;emsp;安装教程 Git&amp;emsp;&amp;emsp;安装教程  &amp;emsp;&amp;emsp;如">
+  <meta name="description" content="为什么要写这个关于Hexo的博客&amp;emsp;&amp;emsp;最近这段时间感觉搭一个属于自己的博客是一个很有意义的事情，写这个博客也是为了记录自己在学习过程中的收获，同时也留下一个学习的轨迹，或许可以帮助到其它需要的人。 什么是Hexo&amp;emsp;&amp;emsp;hexo是Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静">
 <meta name="keywords" content="hexo安装">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo入门学习（一）：安装">
-<meta property="og:url" content="http://yoursite.com/2017/06/30/Hexo入门学习（一）：安装/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/06/29/Hexo入门学习（一）：安装/index.html">
 <meta property="og:site_name" content="ActiveBlog">
-<meta property="og:description" content="什么是Hexo&amp;emsp;&amp;emsp;hexo是Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装Hexo的前提工作&amp;emsp;&amp;emsp;安装hexo必须要安装以下两个应用程序：  Node.js&amp;emsp;&amp;emsp;安装教程 Git&amp;emsp;&amp;emsp;安装教程  &amp;emsp;&amp;emsp;如">
-<meta property="og:updated_time" content="2017-06-30T13:03:46.269Z">
+<meta property="og:description" content="为什么要写这个关于Hexo的博客&amp;emsp;&amp;emsp;最近这段时间感觉搭一个属于自己的博客是一个很有意义的事情，写这个博客也是为了记录自己在学习过程中的收获，同时也留下一个学习的轨迹，或许可以帮助到其它需要的人。 什么是Hexo&amp;emsp;&amp;emsp;hexo是Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静">
+<meta property="og:updated_time" content="2017-07-01T06:38:50.702Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo入门学习（一）：安装">
-<meta name="twitter:description" content="什么是Hexo&amp;emsp;&amp;emsp;hexo是Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装Hexo的前提工作&amp;emsp;&amp;emsp;安装hexo必须要安装以下两个应用程序：  Node.js&amp;emsp;&amp;emsp;安装教程 Git&amp;emsp;&amp;emsp;安装教程  &amp;emsp;&amp;emsp;如">
+<meta name="twitter:description" content="为什么要写这个关于Hexo的博客&amp;emsp;&amp;emsp;最近这段时间感觉搭一个属于自己的博客是一个很有意义的事情，写这个博客也是为了记录自己在学习过程中的收获，同时也留下一个学习的轨迹，或许可以帮助到其它需要的人。 什么是Hexo&amp;emsp;&amp;emsp;hexo是Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静">
   
     <link rel="alternate" href="/atom.xml" title="ActiveBlog" type="application/atom+xml">
   
@@ -50,6 +50,16 @@
   <link rel="stylesheet" href="/css/fashion.css" >
   <link rel="stylesheet" href="/css/glyphs.css" >
 
+<script>
+  function(){
+    if('{{ page.password }}'){
+      if (prompt('请输入文章密码','') !== '{{ page.password }}'){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  }
+</script>
 </head>
 
 
@@ -122,8 +132,8 @@
     
     <div class="article-meta">
       
-	<a href="/2017/06/30/Hexo入门学习（一）：安装/" class="article-date">
-	  <time datetime="2017-06-30T12:43:18.000Z" itemprop="datePublished">六月 30, 2017</time>
+	<a href="/2017/06/29/Hexo入门学习（一）：安装/" class="article-date">
+	  <time datetime="2017-06-29T12:43:18.000Z" itemprop="datePublished">六月 29, 2017</time>
 	</a>
 
       
@@ -138,7 +148,8 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p>&emsp;&emsp;hexo是Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://note.youdao.com/" target="_blank" rel="external">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+        <h2 id="为什么要写这个关于Hexo的博客"><a href="#为什么要写这个关于Hexo的博客" class="headerlink" title="为什么要写这个关于Hexo的博客"></a>为什么要写这个关于Hexo的博客</h2><p>&emsp;&emsp;最近这段时间感觉搭一个属于自己的博客是一个很有意义的事情，写这个博客也是为了记录自己在学习过程中的收获，同时也留下一个学习的轨迹，或许可以帮助到其它需要的人。</p>
+<h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p>&emsp;&emsp;hexo是Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://note.youdao.com/" target="_blank" rel="external">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <h2 id="安装Hexo的前提工作"><a href="#安装Hexo的前提工作" class="headerlink" title="安装Hexo的前提工作"></a>安装Hexo的前提工作</h2><p>&emsp;&emsp;安装hexo必须要安装以下两个应用程序：</p>
 <ul>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>&emsp;&emsp;<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="external">安装教程</a></li>
@@ -163,6 +174,11 @@
 <li><h3 id="新建完成后，指定文件夹的目录如下"><a href="#新建完成后，指定文件夹的目录如下" class="headerlink" title="新建完成后，指定文件夹的目录如下:"></a>新建完成后，指定文件夹的目录如下:</h3></li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
+<h3 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h3><p>&emsp;&emsp;您可以在 _config.yml中修改大部份的配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">参数	描述</div><div class="line">title	网站标题</div><div class="line">subtitle	网站副标题</div><div class="line">description	网站描述</div><div class="line">author	您的名字</div><div class="line">language	网站使用的语言</div><div class="line">timezone	网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。  </p>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">参数	描述</div><div class="line">theme	当前主题名称。值为false时禁用主题</div><div class="line">deploy	部署部分的设置[详情查看下一篇文章]</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;更多配置查看<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">hexo</a>官方文档。</p>
 <ul>
 <li><h3 id="启动服务器进行本地预览"><a href="#启动服务器进行本地预览" class="headerlink" title="启动服务器进行本地预览"></a>启动服务器进行本地预览</h3></li>
 </ul>
@@ -186,30 +202,27 @@
 
       
         
-	<section id="comments" class="comment">
-	  <div id="disqus_thread">
-	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	  </div>
-	</section>
-
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2017/06/29/Hexo入门学习（一）：安装/" data-title="Hexo入门学习（一）：安装" data-url="http://yoursite.com/2017/06/29/Hexo入门学习（一）：安装/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
-	var disqus_shortname = 'MSK0379';
-	(function(){
-	  var dsq = document.createElement('script');
-	  dsq.type = 'text/javascript';
-	  dsq.async = true;
-	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	}());
-	(function(){
-	  var dsq = document.createElement('script');
-	  dsq.type = 'text/javascript';
-	  dsq.async = true;
-	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	}());
-	</script>
-
+	var duoshuoQuery = {short_name:"MSK0379"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+	<link rel="stylesheet" href="/css/comment.css">
 
 
       
@@ -218,6 +231,20 @@
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2017/06/30/hexo入门学习（二）：关联GitHub/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          hexo入门学习（二）：关联GitHub
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
@@ -227,7 +254,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Hexo"><span class="nav-number">1.</span> <span class="nav-text">什么是Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo的前提工作"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo的前提工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows用户安装"><span class="nav-number">2.1.</span> <span class="nav-text">Windows用户安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">3.</span> <span class="nav-text">安装 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.1.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化文件夹"><span class="nav-number">3.2.</span> <span class="nav-text">初始化文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装依赖和插件"><span class="nav-number">3.3.</span> <span class="nav-text">安装依赖和插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建完成后，指定文件夹的目录如下"><span class="nav-number">3.4.</span> <span class="nav-text">新建完成后，指定文件夹的目录如下:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务器进行本地预览"><span class="nav-number">3.5.</span> <span class="nav-text">启动服务器进行本地预览</span></a></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要写这个关于Hexo的博客"><span class="nav-number">1.</span> <span class="nav-text">为什么要写这个关于Hexo的博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Hexo"><span class="nav-number">2.</span> <span class="nav-text">什么是Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo的前提工作"><span class="nav-number">3.</span> <span class="nav-text">安装Hexo的前提工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows用户安装"><span class="nav-number">3.1.</span> <span class="nav-text">Windows用户安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">4.</span> <span class="nav-text">安装 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">4.1.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化文件夹"><span class="nav-number">4.2.</span> <span class="nav-text">初始化文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装依赖和插件"><span class="nav-number">4.3.</span> <span class="nav-text">安装依赖和插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建完成后，指定文件夹的目录如下"><span class="nav-number">4.4.</span> <span class="nav-text">新建完成后，指定文件夹的目录如下:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础配置"><span class="nav-number">4.5.</span> <span class="nav-text">基础配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展"><span class="nav-number">4.6.</span> <span class="nav-text">扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动服务器进行本地预览"><span class="nav-number">4.7.</span> <span class="nav-text">启动服务器进行本地预览</span></a></li></ol></li></ol>
     
     </div>
   </aside>
