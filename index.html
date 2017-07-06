@@ -144,12 +144,11 @@
       
         
           <div class="entry-thumbnail">
-            <a href="/2017/07/01/hexo入门学习（四）：文章（带图片）/"><img src="hexo入门学习（四）：文章（带图片）/lbxx.jpg" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
+            <a href="/2017/07/01/hexo入门学习（四）：文章（带图片）/"><img src="/hexo入门学习（四）：文章（带图片）/lbxx.jpg" class="attachment-thumb-featured size-thumb-featured wp-post-image" alt=""></a>
           </div>
           <div class="entry-summary">
-          写作&emsp;&emsp;你可以执行下列命令来创建一篇新文章。
-1$ hexo new [layout] &lt;title&gt;
-&emsp;&emsp;您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。
+          
+写作&emsp;&emsp;你可以执行下列命令来创建一篇新文章。
 
         
           <p class="article-more-link">
@@ -157,7 +156,9 @@
           </p>
         </div>
       
+    
     </div>
+
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
@@ -205,22 +206,21 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;&emsp;Hexo 支持个性化定制主题，可以根据自己的喜好进行修改。Hexo主题可以从<a href="https://hexo.io/themes/" target="_blank" rel="external">官网</a>或者<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">GitHub</a>查看更多主题。</p>
-<h2 id="一、安装主题"><a href="#一、安装主题" class="headerlink" title="一、安装主题"></a>一、安装主题</h2><p>&emsp;&emsp;在博客的根目录下打开git bash克隆主题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</div><div class="line"></div><div class="line">更改为你选择的主题地址theme/(名字。建议和原主题名一致)</div></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;等待下载完成。执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim _config.yml</div></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;或者在 themes/你的主题/_config.yml 文件夹下使用文本编辑器打开。修改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: yilia（你下载的主题名称）</div></pre></td></tr></table></figure></p>
-<h2 id="二、主题配置"><a href="#二、主题配置" class="headerlink" title="二、主题配置"></a>二、主题配置</h2><p>&emsp;&emsp;现在主题是更改过来了，但还有许多细节需要处理，比如说你需要修改头像等等。 </p>
-<ul>
-<li>首先进入到根目录下的 themes\yilia 文件夹<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div></pre></td><td class="code"><pre><div class="line"># ---------------------------------------------------------------</div><div class="line"># Site Information Settings</div><div class="line"># 网站信息配置</div><div class="line"># ---------------------------------------------------------------</div><div class="line"></div><div class="line"># Header Menu</div><div class="line"># 主菜单</div><div class="line">menu:</div><div class="line">  Home: /</div><div class="line">  Archives: /archives</div><div class="line">  Categories: /categories</div><div class="line">  Tags: /tags</div><div class="line">  About: /about</div><div class="line">rss: /atom.xml</div><div class="line"></div><div class="line"></div><div class="line"># Set default keywords (Use a comma to separate)</div><div class="line"># 设置默认关键字</div><div class="line">keywords: &quot;&quot;</div><div class="line"></div><div class="line"># Put your favicon.ico into `hexo-site/themes/hipaper/source/` directory.</div><div class="line"># 把你的图标放在***</div><div class="line">favicon: css/images/ActiveBlog.ico</div><div class="line"></div><div class="line"></div><div class="line"># Put your avatar.jpg into `hexo-site/themes/hipaper/source/` directory.</div><div class="line"># url is target link (E.g. `url: https://hexo.io/logo.svg` or `url: css/images/mylogo.jpg`)</div><div class="line">avatar: </div><div class="line">  enable: false</div><div class="line">  width: 124</div><div class="line">  height: 124</div><div class="line">  bottom: 10</div><div class="line">  url: https://hexo.io/logo.svg</div><div class="line"></div><div class="line"></div><div class="line"># AboutPage background, support multiple images.</div><div class="line"># about_big_image: [css/images/pose01.jpg, https://images.unsplash.com/photo-1464306208223-e0b4495a5553?dpr=1&amp;auto=format&amp;fit=crop&amp;w=1500&amp;h=1000&amp;q=80&amp;cs=tinysrgb&amp;crop=&amp;bg=]</div><div class="line"></div><div class="line"></div><div class="line"># Homepage thumbnail</div><div class="line"># 网页的缩略图</div><div class="line">random_thumb: false</div><div class="line"></div><div class="line"></div><div class="line"># Content</div><div class="line">fancybox: true</div><div class="line"></div><div class="line"></div><div class="line"># Sidebar</div><div class="line"># 侧边栏</div><div class="line">sidebar: right</div><div class="line">widgets:</div><div class="line">#- search</div><div class="line">- social</div><div class="line">- recent_posts</div><div class="line">- category</div><div class="line">- tags</div><div class="line">- tagcloud</div><div class="line">- archive</div><div class="line"></div><div class="line"># Social Links</div><div class="line"># Key is the name of FontAwsome icon.</div><div class="line"># 关键是fontawsome图标的名称。</div><div class="line"># Value is the target link (E.g. GitHub: https://github.com/MSK0379)</div><div class="line">social:</div><div class="line">  Github: https://github.com/MSK0379</div><div class="line">  Envelope: mailto:17629007803@163.com</div><div class="line"> # Facebook: </div><div class="line"> # Google-plus: </div><div class="line"> # Instagram: </div><div class="line"></div><div class="line"></div><div class="line"># Search</div><div class="line">search:</div><div class="line">    insight: true # you need to install `hexo-generator-json-content` before using Insight Search</div><div class="line">    swiftype: # enter swiftype install key here</div><div class="line">    baidu: false # you need to disable other search engines to use Baidu search, options: true, false</div><div class="line"></div><div class="line"></div><div class="line"># comment ShortName, you can choose only ONE to display.</div><div class="line">duoshuo_shortname: </div><div class="line">disqus_shortname: MSK0379</div><div class="line"></div><div class="line"></div><div class="line"># Code Highlight theme</div><div class="line"># Available value:</div><div class="line">#    default | normal | night | night eighties | night blue | night bright</div><div class="line"># https://github.com/chriskempson/tomorrow-theme</div><div class="line">highlight_theme: normal</div><div class="line"></div><div class="line"></div><div class="line"># widget behavior</div><div class="line">archive_type: &apos;monthly&apos;</div><div class="line">show_count: true</div><div class="line"></div><div class="line"># Google Webmaster tools verification setting</div><div class="line"># See: https://www.google.com/webmasters/</div><div class="line">google_site_verification:</div><div class="line">baidu_site_verification:</div><div class="line">qihu_site_verification:</div><div class="line"></div><div class="line"># Miscellaneous</div><div class="line">google_analytics:</div><div class="line">gauges_analytics:</div><div class="line">baidu_analytics:</div><div class="line">tencent_analytics:</div><div class="line">busuanzi_analytics: true</div><div class="line">twitter:</div><div class="line">google_plus:</div><div class="line">fb_admins:</div><div class="line">fb_app_id:</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>&emsp;&emsp;接着就自动部署一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;最后发布：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;也可以在本地先预览以下。主题设置完毕，可以快乐玩耍啦。</p>
+        
 
+          
+          <div class="entry-summary">
+          &emsp;&emsp;Hexo 支持个性化定制主题，可以根据自己的喜好进行修改。Hexo主题可以从官网或者GitHub查看更多主题。
+
+        
+          <p class="article-more-link">
+            <a href="/2017/07/01/hexo入门学习（三）：主题设置/#more">阅读全文</a>
+          </p>
+        </div>
       
+    
     </div>
+
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
@@ -268,25 +268,21 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一-创建-Github-域名和仓库"><a href="#一-创建-Github-域名和仓库" class="headerlink" title="一.创建 Github 域名和仓库"></a>一.创建 Github 域名和仓库</h2><h3 id="注册github账户"><a href="#注册github账户" class="headerlink" title="注册github账户"></a>注册github账户</h3><p>&emsp;&emsp;首先你需要注册一个<a href="https://github.com/" target="_blank" rel="external">注册GitHub账户</a> 账号，已有的可以直接创建仓库，注册的话注意username，这会影响到你的域名，所以先想好用户名哦。</p>
-<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>&emsp;&emsp;然后需要创建一个仓库(repository) 来存储我们的网站，点击首页 New repository 按钮创建仓库, Respository name 中的 username.github.io 的 username 一定与前面的 Owner 保持一致。</p>
-<h2 id="二-搭建博客"><a href="#二-搭建博客" class="headerlink" title="二.搭建博客"></a>二.搭建博客</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>&emsp;&emsp;所有必须工具都安装完成后，创建一个文件夹，如：Blog，用于存放hexo配置文件。然后进入文件夹Blog,执行 init 命令初始化 hexo。可议根据前一篇文章在本地预览页面。</p>
-<h3 id="配置Github"><a href="#配置Github" class="headerlink" title="配置Github"></a>配置Github</h3><p>&emsp;&emsp;现在我们需要编辑 Blog 文件夹下的 _config.yml 文件，与自己 Github 账号的 Repository 仓库建立关联。<br>&emsp;&emsp;可以在git bash界面下输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vim _config.yml</div></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;进行修改，也可以在根目录找到_config.yml通过编辑器打开修改（推荐）。</p>
-<p>在此推荐两款文本编辑器</p>
-<ul>
-<li><a href="https://notepad-plus-plus.org/zh/" target="_blank" rel="external">notepad++</a></li>
-<li><a href="http://www.sublimetext.com/" target="_blank" rel="external">sublime Text3</a> </li>
-</ul>
-<p>&emsp;&emsp;基本配置：修改这几个必须设置的键值对，记得保存，注意配置的键值对之间一定要有空格。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: xxxx    //网站标题</div><div class="line">author: xxx   //作者名字</div><div class="line">language: zh-Hans    //网站使用的语言 中文	</div><div class="line">deploy:</div><div class="line">   type: git  </div><div class="line">   repo: https://github.com/username/username.github.io.git</div><div class="line">   branch: master</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;<strong>repo:[必须有空格] 输入您的Github创建的仓库所对应的URL链接，复制粘贴一下就OK啦</strong></p>
-<h3 id="自动部署发布"><a href="#自动部署发布" class="headerlink" title="自动部署发布"></a>自动部署发布</h3><p>&emsp;&emsp;配置文件修改完成以后，执行命令，完成自动部署：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean </div><div class="line">hexo g </div><div class="line">hexo d</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;这样就将你的博客上传至你的github仓库中，可以进入你的github账户查看。在浏览器中输入 username.github.io预览。</p>
+        
 
+          
+          <div class="entry-summary">
+          一.创建 Github 域名和仓库
+
+        
+          <p class="article-more-link">
+            <a href="/2017/06/30/hexo入门学习（二）：关联GitHub/#more">阅读全文</a>
+          </p>
+        </div>
       
+    
     </div>
+
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
@@ -334,49 +330,21 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="为什么要写这个关于Hexo的博客"><a href="#为什么要写这个关于Hexo的博客" class="headerlink" title="为什么要写这个关于Hexo的博客"></a>为什么要写这个关于Hexo的博客</h2><p>&emsp;&emsp;最近这段时间感觉搭一个属于自己的博客是一个很有意义的事情，写这个博客也是为了记录自己在学习过程中的收获，同时也留下一个学习的轨迹，或许可以帮助到其它需要的人。</p>
-<h2 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p>&emsp;&emsp;hexo是Hexo是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://note.youdao.com/" target="_blank" rel="external">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h2 id="安装Hexo的前提工作"><a href="#安装Hexo的前提工作" class="headerlink" title="安装Hexo的前提工作"></a>安装Hexo的前提工作</h2><p>&emsp;&emsp;安装hexo必须要安装以下两个应用程序：</p>
-<ul>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>&emsp;&emsp;<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="external">安装教程</a></li>
-<li><a href="https://git-scm.com/" target="_blank" rel="external">Git</a>&emsp;&emsp;<a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="external">安装教程</a></li>
-</ul>
-<p>&emsp;&emsp;如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。您可以直接查看安装Hexo。</p>
-<h3 id="Windows用户安装"><a href="#Windows用户安装" class="headerlink" title="Windows用户安装"></a>Windows用户安装</h3><p>&emsp;&emsp;对于windows用户来说，建议使用安装程序进行安装。安装时，请勾选Add to PATH选项。<br>另外，您也可以使用Git Bash，这是git for windows自带的一组程序，提供了Linux风格的shell，在该环境下，您可以直接用上面提到的命令来安装Node.js。打开它的方法很简单，在任意位置单击右键，选择“Git Bash Here”即可。由于Hexo的很多操作都涉及到命令行，您可以考虑始终使用Git Bash来进行操作。</p>
-<h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><p>新建一个文件夹，例如ActiveBlog。进入ActiveBlog文件夹，右键点击Git Bash Here。</p>
-<ul>
-<li><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
-<ul>
-<li><h3 id="初始化文件夹"><a href="#初始化文件夹" class="headerlink" title="初始化文件夹"></a>初始化文件夹</h3></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
-<ul>
-<li><h3 id="安装依赖和插件"><a href="#安装依赖和插件" class="headerlink" title="安装依赖和插件"></a>安装依赖和插件</h3></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo install</div></pre></td></tr></table></figure>
-<ul>
-<li><h3 id="新建完成后，指定文件夹的目录如下"><a href="#新建完成后，指定文件夹的目录如下" class="headerlink" title="新建完成后，指定文件夹的目录如下:"></a>新建完成后，指定文件夹的目录如下:</h3></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
-<h3 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h3><p>&emsp;&emsp;您可以在 _config.yml中修改大部份的配置。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">参数	描述</div><div class="line">title	网站标题</div><div class="line">subtitle	网站副标题</div><div class="line">description	网站描述</div><div class="line">author	您的名字</div><div class="line">language	网站使用的语言</div><div class="line">timezone	网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;其中，description主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。author参数用于主题显示文章的作者。  </p>
-<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">参数	描述</div><div class="line">theme	当前主题名称。值为false时禁用主题</div><div class="line">deploy	部署部分的设置[详情查看下一篇文章]</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;更多配置查看<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">hexo</a>官方文档。</p>
-<ul>
-<li><h3 id="启动服务器进行本地预览"><a href="#启动服务器进行本地预览" class="headerlink" title="启动服务器进行本地预览"></a>启动服务器进行本地预览</h3></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server(或hexo server -p 5000)</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;(设置端口)我的4000端口被占用，所以使用5000。</p>
-<p>&emsp;&emsp;打开浏览器访问<a href="http://localhost:5000" target="_blank" rel="external">http://localhost:5000</a>访问初始化页面。</p>
-<blockquote>
-<p>&emsp;&emsp;如有疑问欢迎点击右侧联系方式联系我。</p>
-</blockquote>
+        
 
+          
+          <div class="entry-summary">
+          为什么要写这个关于Hexo的博客&emsp;&emsp;最近这段时间感觉搭一个属于自己的博客是一个很有意义的事情，写这个博客也是为了记录自己在学习过程中的收获，同时也留下一个学习的轨迹，或许可以帮助到其它需要的人。
+
+        
+          <p class="article-more-link">
+            <a href="/2017/06/29/Hexo入门学习（一）：安装/#more">阅读全文</a>
+          </p>
+        </div>
       
+    
     </div>
+
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
@@ -487,7 +455,7 @@
 
             
               <div class="widget-entry-thumbnail">
-                <a href="/2017/07/01/hexo入门学习（四）：文章（带图片）/" title=""><img width="50" height="50" src="hexo入门学习（四）：文章（带图片）/lbxx.jpg" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
+                <a href="/2017/07/01/hexo入门学习（四）：文章（带图片）/" title=""><img width="50" height="50" src="/hexo入门学习（四）：文章（带图片）/lbxx.jpg" class="attachment-thumb-small size-thumb-small wp-post-image" alt="preview-16" title=""></a>
               </div>
               <div class="widget-entry-summary">
             
