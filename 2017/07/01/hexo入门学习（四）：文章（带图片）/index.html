@@ -1,0 +1,367 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hexo入门学习（四）：文章（带图片） | ActiveBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="hexo安装" />
+  
+  
+  
+  
+  <meta name="description" content="写作&amp;emsp;&amp;emsp;你可以执行下列命令来创建一篇新文章。">
+<meta name="keywords" content="hexo安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo入门学习（四）：文章（带图片）">
+<meta property="og:url" content="http://yoursite.com/2017/07/01/hexo入门学习（四）：文章（带图片）/index.html">
+<meta property="og:site_name" content="ActiveBlog">
+<meta property="og:description" content="写作&amp;emsp;&amp;emsp;你可以执行下列命令来创建一篇新文章。">
+<meta property="og:image" content="http://yoursite.com/gallery/lbxx.jpg">
+<meta property="og:updated_time" content="2017-07-09T05:43:39.883Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo入门学习（四）：文章（带图片）">
+<meta name="twitter:description" content="写作&amp;emsp;&amp;emsp;你可以执行下列命令来创建一篇新文章。">
+<meta name="twitter:image" content="http://yoursite.com/gallery/lbxx.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="ActiveBlog" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/ActiveBlog.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<script>
+  function(){
+    if('{{ page.password }}'){
+      if (prompt('请输入文章密码','') !== '{{ page.password }}'){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  }
+</script>
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="ActiveBlog" rel="home"> ActiveBlog </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Action speak louder than words.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-hexo入门学习（四）：文章（带图片）" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="/gallery/lbxx.jpg" rel="gallery_cj4wcyary0009asv0lv6urrpf">
+        <img src="/gallery/lbxx.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      hexo入门学习（四）：文章（带图片）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/07/01/hexo入门学习（四）：文章（带图片）/" class="article-date">
+	  <time datetime="2017-07-01T06:20:35.000Z" itemprop="datePublished">七月 1, 2017</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/hexo教程/">hexo教程</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>&emsp;&emsp;你可以执行下列命令来创建一篇新文章。<br><a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。</p>
+<p>&emsp;&emsp;hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。</p>
+<table>
+<thead>
+<tr>
+<th>布局</th>
+<th>路径 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> post</td>
+<td>source/_posts</td>
+</tr>
+<tr>
+<td> page</td>
+<td>source</td>
+</tr>
+<tr>
+<td> draft</td>
+<td>source/_drafts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h2><p>&emsp;&emsp;刚刚提到了 Hexo 的一种特殊布局：draft，这种布局在建立时会被保存到 source/_drafts 文件夹，您可通过 publish 命令将草稿移动到 source/_posts 文件夹，该命令的使用方式与 new 十分类似，您也可在命令中指定 layout 来指定布局。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo publish [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;草稿默认不会显示在页面中，您可在执行时加上 –draft 参数，或是把 render_drafts 参数设为 true 来预览草稿。</p>
+<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>&emsp;&emsp;需要用到插件<a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">CodeFalling/hexo-asset-image</a>。<br>&emsp;&emsp;首先确认 _config.yml 中有 post_asset_folder:true 。<br>&emsp;&emsp;安装此插件：在 hexo 目录，执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这样的目录结构（目录名和文章名一致），只要使用 （可以是gif格式）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![lbxx](hexo入门学习（三）：文章（带图片）/lbxx.jpg)</div></pre></td></tr></table></figure></p>
+<p> 就可以插入图片。会将图片和文章生成到一个目录下。同时，生成的 html 是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;/2017/7/1/hexo入门学习（三）：文章（带图片）/logo.jpg&quot; alt=&quot;logo&quot;&gt;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;执行下述代码后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;hexo入门学习（四）：文章（带图片）&quot;</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;得到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo入门学习（三）：文章（带图片）</div><div class="line">├── lujing.png</div><div class="line">└── lbxx.jpg</div><div class="line">hexo入门学习（三）：文章（带图片）.md</div></pre></td></tr></table></figure></p>
+<p><img src="/2017/07/01/hexo入门学习（四）：文章（带图片）/lujing.png" alt=""><br>&emsp;&emsp;显示蜡笔小新图片为下图：<br><img src="/2017/07/01/hexo入门学习（四）：文章（带图片）/lbxx.jpg" alt=""></p>
+
+      
+    </div>
+
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/hexo教程/">hexo教程</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo安装/">hexo安装</a></li></ul>
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/01/hexo入门学习（三）：主题设置/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">hexo入门学习（三）：主题设置</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写作"><span class="nav-number">1.</span> <span class="nav-text">写作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#草稿"><span class="nav-number">2.</span> <span class="nav-text">草稿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入图片"><span class="nav-number">3.</span> <span class="nav-text">插入图片</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 ActiveBlog All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+
+  </div>
+</footer>
+
+<!--再div中标注主题出处  -->
+ <!-- <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+    
+-->
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262565482'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1262565482%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
