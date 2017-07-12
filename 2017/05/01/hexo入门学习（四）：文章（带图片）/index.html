@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hexo入门学习（二）：关联GitHub | ActiveBlog</title>
+  <title>hexo入门学习（四）：文章（带图片） | ActiveBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="keywords" content="hexo安装" />
@@ -11,17 +11,19 @@
   
   
   
-  <meta name="description" content="一.创建 Github 域名和仓库">
+  <meta name="description" content="写作&amp;emsp;&amp;emsp;你可以执行下列命令来创建一篇新文章。">
 <meta name="keywords" content="hexo安装">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo入门学习（二）：关联GitHub">
-<meta property="og:url" content="http://yoursite.com/2017/06/30/hexo入门学习（二）：关联GitHub/index.html">
+<meta property="og:title" content="hexo入门学习（四）：文章（带图片）">
+<meta property="og:url" content="http://yoursite.com/2017/05/01/hexo入门学习（四）：文章（带图片）/index.html">
 <meta property="og:site_name" content="ActiveBlog">
-<meta property="og:description" content="一.创建 Github 域名和仓库">
-<meta property="og:updated_time" content="2017-07-06T11:00:04.181Z">
+<meta property="og:description" content="写作&amp;emsp;&amp;emsp;你可以执行下列命令来创建一篇新文章。">
+<meta property="og:image" content="http://yoursite.com/gallery/lbxx.jpg">
+<meta property="og:updated_time" content="2017-07-12T13:14:50.835Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo入门学习（二）：关联GitHub">
-<meta name="twitter:description" content="一.创建 Github 域名和仓库">
+<meta name="twitter:title" content="hexo入门学习（四）：文章（带图片）">
+<meta name="twitter:description" content="写作&amp;emsp;&amp;emsp;你可以执行下列命令来创建一篇新文章。">
+<meta name="twitter:image" content="http://yoursite.com/gallery/lbxx.jpg">
   
     <link rel="alternate" href="/atom.xml" title="ActiveBlog" type="application/atom+xml">
   
@@ -116,15 +118,25 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-hexo入门学习（二）：关联GitHub" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-hexo入门学习（四）：文章（带图片）" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="/gallery/lbxx.jpg" rel="gallery_cj5114olv000es8v048tasneo">
+        <img src="/gallery/lbxx.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
     
       <header class="article-header">
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      hexo入门学习（二）：关联GitHub
+      hexo入门学习（四）：文章（带图片）
     </h1>
   
 
@@ -132,8 +144,8 @@
     
     <div class="article-meta">
       
-	<a href="/2017/06/30/hexo入门学习（二）：关联GitHub/" class="article-date">
-	  <time datetime="2017-06-30T05:30:18.000Z" itemprop="datePublished">六月 30, 2017</time>
+	<a href="/2017/05/01/hexo入门学习（四）：文章（带图片）/" class="article-date">
+	  <time datetime="2017-05-01T06:20:35.000Z" itemprop="datePublished">五月 1, 2017</time>
 	</a>
 
       
@@ -148,23 +160,43 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一-创建-Github-域名和仓库"><a href="#一-创建-Github-域名和仓库" class="headerlink" title="一.创建 Github 域名和仓库"></a>一.创建 Github 域名和仓库</h2><a id="more"></a>
-<h3 id="注册github账户"><a href="#注册github账户" class="headerlink" title="注册github账户"></a>注册github账户</h3><p>&emsp;&emsp;首先你需要注册一个<a href="https://github.com/" target="_blank" rel="external">注册GitHub账户</a> 账号，已有的可以直接创建仓库，注册的话注意username，这会影响到你的域名，所以先想好用户名哦。</p>
-<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>&emsp;&emsp;然后需要创建一个仓库(repository) 来存储我们的网站，点击首页 New repository 按钮创建仓库, Respository name 中的 username.github.io 的 username 一定与前面的 Owner 保持一致。</p>
-<h2 id="二-搭建博客"><a href="#二-搭建博客" class="headerlink" title="二.搭建博客"></a>二.搭建博客</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>&emsp;&emsp;所有必须工具都安装完成后，创建一个文件夹，如：Blog，用于存放hexo配置文件。然后进入文件夹Blog,执行 init 命令初始化 hexo。可议根据前一篇文章在本地预览页面。</p>
-<h3 id="配置Github"><a href="#配置Github" class="headerlink" title="配置Github"></a>配置Github</h3><p>&emsp;&emsp;现在我们需要编辑 Blog 文件夹下的 _config.yml 文件，与自己 Github 账号的 Repository 仓库建立关联。<br>&emsp;&emsp;可以在git bash界面下输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vim _config.yml</div></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;进行修改，也可以在根目录找到_config.yml通过编辑器打开修改（推荐）。</p>
-<p>在此推荐两款文本编辑器</p>
-<ul>
-<li><a href="https://notepad-plus-plus.org/zh/" target="_blank" rel="external">notepad++</a></li>
-<li><a href="http://www.sublimetext.com/" target="_blank" rel="external">sublime Text3</a> </li>
-</ul>
-<p>&emsp;&emsp;基本配置：修改这几个必须设置的键值对，记得保存，注意配置的键值对之间一定要有空格。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: xxxx    //网站标题</div><div class="line">author: xxx   //作者名字</div><div class="line">language: zh-Hans    //网站使用的语言 中文	</div><div class="line">deploy:</div><div class="line">   type: git  </div><div class="line">   repo: https://github.com/username/username.github.io.git</div><div class="line">   branch: master</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;<strong>repo:[必须有空格] 输入您的Github创建的仓库所对应的URL链接，复制粘贴一下就OK啦</strong></p>
-<h3 id="自动部署发布"><a href="#自动部署发布" class="headerlink" title="自动部署发布"></a>自动部署发布</h3><p>&emsp;&emsp;配置文件修改完成以后，执行命令，完成自动部署：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean </div><div class="line">hexo g </div><div class="line">hexo d</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;这样就将你的博客上传至你的github仓库中，可以进入你的github账户查看。在浏览器中输入 username.github.io预览。</p>
+        <h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>&emsp;&emsp;你可以执行下列命令来创建一篇新文章。<br><a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。</p>
+<p>&emsp;&emsp;hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。</p>
+<table>
+<thead>
+<tr>
+<th>布局</th>
+<th>路径 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> post</td>
+<td>source/_posts</td>
+</tr>
+<tr>
+<td> page</td>
+<td>source</td>
+</tr>
+<tr>
+<td> draft</td>
+<td>source/_drafts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h2><p>&emsp;&emsp;刚刚提到了 Hexo 的一种特殊布局：draft，这种布局在建立时会被保存到 source/_drafts 文件夹，您可通过 publish 命令将草稿移动到 source/_posts 文件夹，该命令的使用方式与 new 十分类似，您也可在命令中指定 layout 来指定布局。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo publish [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;草稿默认不会显示在页面中，您可在执行时加上 –draft 参数，或是把 render_drafts 参数设为 true 来预览草稿。</p>
+<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>&emsp;&emsp;需要用到插件<a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">CodeFalling/hexo-asset-image</a>。<br>&emsp;&emsp;首先确认 _config.yml 中有 post_asset_folder:true 。<br>&emsp;&emsp;安装此插件：在 hexo 目录，执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这样的目录结构（目录名和文章名一致），只要使用 （可以是gif格式）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![lbxx](hexo入门学习（三）：文章（带图片）/lbxx.jpg)</div></pre></td></tr></table></figure></p>
+<p> 就可以插入图片。会将图片和文章生成到一个目录下。同时，生成的 html 是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;/2017/7/1/hexo入门学习（三）：文章（带图片）/logo.jpg&quot; alt=&quot;logo&quot;&gt;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;执行下述代码后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;hexo入门学习（四）：文章（带图片）&quot;</div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;得到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo入门学习（三）：文章（带图片）</div><div class="line">├── lujing.png</div><div class="line">└── lbxx.jpg</div><div class="line">hexo入门学习（三）：文章（带图片）.md</div></pre></td></tr></table></figure></p>
+<p><img src="/2017/05/01/hexo入门学习（四）：文章（带图片）/lujing.png" alt=""><br>&emsp;&emsp;显示蜡笔小新图片为下图：<br><img src="/2017/05/01/hexo入门学习（四）：文章（带图片）/lbxx.jpg" alt=""></p>
 
       
     </div>
@@ -206,19 +238,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/07/01/hexo入门学习（三）：主题设置/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/12/hexo入门学习（五）：绑定独立域名/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
-          hexo入门学习（三）：主题设置
+          hexo入门学习（五）：绑定独立域名
         
       </div>
     </a>
   
   
-    <a href="/2017/06/29/Hexo入门学习（一）：安装/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/05/01/hexo入门学习（三）：主题设置/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">Hexo入门学习（一）：安装</div>
+      <div class="article-nav-title">hexo入门学习（三）：主题设置</div>
     </a>
   
 </nav>
@@ -232,7 +264,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-创建-Github-域名和仓库"><span class="nav-number">1.</span> <span class="nav-text">一.创建 Github 域名和仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注册github账户"><span class="nav-number">1.1.</span> <span class="nav-text">注册github账户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建仓库"><span class="nav-number">1.2.</span> <span class="nav-text">创建仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-搭建博客"><span class="nav-number">2.</span> <span class="nav-text">二.搭建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">2.1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Github"><span class="nav-number">2.2.</span> <span class="nav-text">配置Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动部署发布"><span class="nav-number">2.3.</span> <span class="nav-text">自动部署发布</span></a></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写作"><span class="nav-number">1.</span> <span class="nav-text">写作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#草稿"><span class="nav-number">2.</span> <span class="nav-text">草稿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入图片"><span class="nav-number">3.</span> <span class="nav-text">插入图片</span></a></li></ol>
     
     </div>
   </aside>
