@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/19/Servlet基础（一）：servlet的生命周期/index.html">
 <meta property="og:site_name" content="ActiveBlog">
 <meta property="og:description" content="Servlet简介&amp;emsp;&amp;emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。&amp;emsp;&amp;emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议的方法，并且重写了servlet接口的servlet方法，该方法中根">
-<meta property="og:updated_time" content="2017-07-19T05:27:59.610Z">
+<meta property="og:updated_time" content="2017-07-19T05:38:23.109Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Servlet基础（一）：servlet的生命周期">
 <meta name="twitter:description" content="Servlet简介&amp;emsp;&amp;emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。&amp;emsp;&amp;emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议的方法，并且重写了servlet接口的servlet方法，该方法中根">
@@ -152,7 +152,8 @@
 <ul>
 <li>编写应用程序（java类），然后继承Httpservlet重写其内部方法，</li>
 <li><p>将应用程序部署到web服务器中，通过请求访问该应用程序，web服务器会调用该程序进行数    据处理。<br>&emsp;&emsp;备注：上述应用程序即为一个servlet程序。</p>
-<h2 id="servlet的生命周期（运行过程）"><a href="#servlet的生命周期（运行过程）" class="headerlink" title="servlet的生命周期（运行过程）"></a>servlet的生命周期（运行过程）</h2><h3 id="在下列时刻Servlet容器装载Servlet"><a href="#在下列时刻Servlet容器装载Servlet" class="headerlink" title="在下列时刻Servlet容器装载Servlet:"></a>在下列时刻Servlet容器装载Servlet:</h3></li>
+<h2 id="servlet的生命周期（运行过程）"><a href="#servlet的生命周期（运行过程）" class="headerlink" title="servlet的生命周期（运行过程）"></a>servlet的生命周期（运行过程）</h2><p>&emsp;&emsp;在GITHUB上提供了一个小项目，用来测试生命周期<a href="https://github.com/MSK0379/MyServletDemo" target="_blank" rel="external">点击查看GitHub</a></p>
+<h3 id="在下列时刻Servlet容器装载Servlet"><a href="#在下列时刻Servlet容器装载Servlet" class="headerlink" title="在下列时刻Servlet容器装载Servlet:"></a>在下列时刻Servlet容器装载Servlet:</h3></li>
 <li><p>方式一：Servlet容器启动时自动装载Servlet。需要在web.xml文件中添加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;Servlet&gt;</div><div class="line">    &lt;loadon-startup&gt;1&lt;/loadon-startup&gt;</div><div class="line">      &lt;!-- 数字越小优先级越高 --&gt;</div><div class="line">&lt;/Servlet</div></pre></td></tr></table></figure>
 </li>
