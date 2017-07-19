@@ -11,17 +11,17 @@
   
   
   
-  <meta name="description" content="Servlet简介&amp;emsp;&amp;emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。&amp;emsp;&amp;emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议的方法，并且重写了servlet接口的servlet方法，该方法中根">
+  <meta name="description" content="&amp;emsp;&amp;emsp;详情请查看个人博客Servlet基础（一） Servlet简介&amp;emsp;&amp;emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。&amp;emsp;&amp;emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议">
 <meta name="keywords" content="Servlet声明周期">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Servlet基础（一）：servlet的生命周期">
 <meta property="og:url" content="http://yoursite.com/2017/07/19/Servlet基础（一）：servlet的生命周期/index.html">
 <meta property="og:site_name" content="ActiveBlog">
-<meta property="og:description" content="Servlet简介&amp;emsp;&amp;emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。&amp;emsp;&amp;emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议的方法，并且重写了servlet接口的servlet方法，该方法中根">
-<meta property="og:updated_time" content="2017-07-19T05:38:23.109Z">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;详情请查看个人博客Servlet基础（一） Servlet简介&amp;emsp;&amp;emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。&amp;emsp;&amp;emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议">
+<meta property="og:updated_time" content="2017-07-19T09:05:46.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Servlet基础（一）：servlet的生命周期">
-<meta name="twitter:description" content="Servlet简介&amp;emsp;&amp;emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。&amp;emsp;&amp;emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议的方法，并且重写了servlet接口的servlet方法，该方法中根">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;详情请查看个人博客Servlet基础（一） Servlet简介&amp;emsp;&amp;emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。&amp;emsp;&amp;emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议">
   
     <link rel="alternate" href="/atom.xml" title="ActiveBlog" type="application/atom+xml">
   
@@ -148,7 +148,8 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Servlet简介"><a href="#Servlet简介" class="headerlink" title="Servlet简介"></a>Servlet简介</h2><p>&emsp;&emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。<br>&emsp;&emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议的方法，并且重写了servlet接口的servlet方法，该方法中根据用户的http请求来判断是get提交或post提交，若get提交，调用doGet()方法，若post提交，调用doPost()方法<br><a id="more"></a><br>用户如果需要开发一个动态web资源，需要实现以下两个步骤：</p>
+        <p>&emsp;&emsp;详情请查看个人博客<a href="http://activeblog.xin/2017/07/19/Servlet%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9Aservlet%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" target="_blank" rel="external">Servlet基础（一）</a></p>
+<h2 id="Servlet简介"><a href="#Servlet简介" class="headerlink" title="Servlet简介"></a>Servlet简介</h2><p>&emsp;&emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。<br>&emsp;&emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议的方法，并且重写了servlet接口的servlet方法，该方法中根据用户的http请求来判断是get提交或post提交，若get提交，调用doGet()方法，若post提交，调用doPost()方法<br><a id="more"></a><br>用户如果需要开发一个动态web资源，需要实现以下两个步骤：</p>
 <ul>
 <li>编写应用程序（java类），然后继承Httpservlet重写其内部方法，</li>
 <li><p>将应用程序部署到web服务器中，通过请求访问该应用程序，web服务器会调用该程序进行数    据处理。<br>&emsp;&emsp;备注：上述应用程序即为一个servlet程序。</p>
