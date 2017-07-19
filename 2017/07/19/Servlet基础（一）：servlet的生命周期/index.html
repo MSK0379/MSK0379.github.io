@@ -3,27 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hexo入门学习（四）：文章（带图片） | ActiveBlog</title>
+  <title>Servlet基础（一）：servlet的生命周期 | ActiveBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="hexo安装" />
+  <meta name="keywords" content="Servlet声明周期" />
   
   
   
   
-  <meta name="description" content="写作&amp;emsp;&amp;emsp;你可以执行下列命令来创建一篇新文章。">
-<meta name="keywords" content="hexo安装">
+  <meta name="description" content="Servlet简介&amp;emsp;&amp;emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。&amp;emsp;&amp;emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议的方法，并且重写了servlet接口的servlet方法，该方法中根">
+<meta name="keywords" content="Servlet声明周期">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo入门学习（四）：文章（带图片）">
-<meta property="og:url" content="http://yoursite.com/2017/05/01/hexo入门学习（四）：文章（带图片）/index.html">
+<meta property="og:title" content="Servlet基础（一）：servlet的生命周期">
+<meta property="og:url" content="http://yoursite.com/2017/07/19/Servlet基础（一）：servlet的生命周期/index.html">
 <meta property="og:site_name" content="ActiveBlog">
-<meta property="og:description" content="写作&amp;emsp;&amp;emsp;你可以执行下列命令来创建一篇新文章。">
-<meta property="og:image" content="http://yoursite.com/gallery/lbxx.jpg">
-<meta property="og:updated_time" content="2017-07-12T13:14:50.835Z">
+<meta property="og:description" content="Servlet简介&amp;emsp;&amp;emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。&amp;emsp;&amp;emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议的方法，并且重写了servlet接口的servlet方法，该方法中根">
+<meta property="og:updated_time" content="2017-07-19T05:27:59.610Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo入门学习（四）：文章（带图片）">
-<meta name="twitter:description" content="写作&amp;emsp;&amp;emsp;你可以执行下列命令来创建一篇新文章。">
-<meta name="twitter:image" content="http://yoursite.com/gallery/lbxx.jpg">
+<meta name="twitter:title" content="Servlet基础（一）：servlet的生命周期">
+<meta name="twitter:description" content="Servlet简介&amp;emsp;&amp;emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。&amp;emsp;&amp;emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议的方法，并且重写了servlet接口的servlet方法，该方法中根">
   
     <link rel="alternate" href="/atom.xml" title="ActiveBlog" type="application/atom+xml">
   
@@ -118,25 +116,15 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-hexo入门学习（四）：文章（带图片）" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-Servlet基础（一）：servlet的生命周期" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
-<div class="article-gallery">
-  <div class="article-gallery-photos">
-    
-      <a class="article-gallery-img fancybox" href="/gallery/lbxx.jpg" rel="gallery_cj5akiook000m2ov0oapddrd2">
-        <img src="/gallery/lbxx.jpg" itemprop="image">
-      </a>
-    
-  </div>
-</div>
-
     
       <header class="article-header">
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      hexo入门学习（四）：文章（带图片）
+      Servlet基础（一）：servlet的生命周期
     </h1>
   
 
@@ -144,13 +132,13 @@
     
     <div class="article-meta">
       
-	<a href="/2017/05/01/hexo入门学习（四）：文章（带图片）/" class="article-date">
-	  <time datetime="2017-05-01T06:20:35.000Z" itemprop="datePublished">五月 1, 2017</time>
+	<a href="/2017/07/19/Servlet基础（一）：servlet的生命周期/" class="article-date">
+	  <time datetime="2017-07-19T05:21:22.000Z" itemprop="datePublished">七月 19, 2017</time>
 	</a>
 
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/hexo教程/">hexo教程</a>
+    <a class="article-category-link" href="/categories/Servlet/">Servlet</a>
  
       
 	<span id="busuanzi_container_page_pv">
@@ -160,43 +148,20 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>&emsp;&emsp;你可以执行下列命令来创建一篇新文章。<br><a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。</p>
-<p>&emsp;&emsp;hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。</p>
-<table>
-<thead>
-<tr>
-<th>布局</th>
-<th>路径 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> post</td>
-<td>source/_posts</td>
-</tr>
-<tr>
-<td> page</td>
-<td>source</td>
-</tr>
-<tr>
-<td> draft</td>
-<td>source/_drafts</td>
-</tr>
-</tbody>
-</table>
-<h2 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h2><p>&emsp;&emsp;刚刚提到了 Hexo 的一种特殊布局：draft，这种布局在建立时会被保存到 source/_drafts 文件夹，您可通过 publish 命令将草稿移动到 source/_posts 文件夹，该命令的使用方式与 new 十分类似，您也可在命令中指定 layout 来指定布局。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo publish [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;草稿默认不会显示在页面中，您可在执行时加上 –draft 参数，或是把 render_drafts 参数设为 true 来预览草稿。</p>
-<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>&emsp;&emsp;需要用到插件<a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="external">CodeFalling/hexo-asset-image</a>。<br>&emsp;&emsp;首先确认 _config.yml 中有 post_asset_folder:true 。<br>&emsp;&emsp;安装此插件：在 hexo 目录，执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;这样的目录结构（目录名和文章名一致），只要使用 （可以是gif格式）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![lbxx](hexo入门学习（三）：文章（带图片）/lbxx.jpg)</div></pre></td></tr></table></figure></p>
-<p> 就可以插入图片。会将图片和文章生成到一个目录下。同时，生成的 html 是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src=&quot;/2017/7/1/hexo入门学习（三）：文章（带图片）/logo.jpg&quot; alt=&quot;logo&quot;&gt;</div></pre></td></tr></table></figure>
-<p>&emsp;&emsp;执行下述代码后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;hexo入门学习（四）：文章（带图片）&quot;</div></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;得到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo入门学习（三）：文章（带图片）</div><div class="line">├── lujing.png</div><div class="line">└── lbxx.jpg</div><div class="line">hexo入门学习（三）：文章（带图片）.md</div></pre></td></tr></table></figure></p>
-<p><img src="/2017/05/01/hexo入门学习（四）：文章（带图片）/lujing.png" alt=""><br>&emsp;&emsp;显示蜡笔小新图片为下图：<br><img src="/2017/05/01/hexo入门学习（四）：文章（带图片）/lbxx.jpg" alt=""></p>
+        <h2 id="Servlet简介"><a href="#Servlet简介" class="headerlink" title="Servlet简介"></a>Servlet简介</h2><p>&emsp;&emsp;Servlet是运行在服务器的java应用程序，负责接受客户端的请求，和数据的处理，然后将结果发送给客户端的技术。<br>&emsp;&emsp;sun公司jdk提供了一个servlet接口，然后提供了该接口的实现类HttpServlet，该Httpservlet类添加了能够解析   http协议的方法，并且重写了servlet接口的servlet方法，该方法中根据用户的http请求来判断是get提交或post提交，若get提交，调用doGet()方法，若post提交，调用doPost()方法<br><a id="more"></a><br>用户如果需要开发一个动态web资源，需要实现以下两个步骤：</p>
+<ul>
+<li>编写应用程序（java类），然后继承Httpservlet重写其内部方法，</li>
+<li><p>将应用程序部署到web服务器中，通过请求访问该应用程序，web服务器会调用该程序进行数    据处理。<br>&emsp;&emsp;备注：上述应用程序即为一个servlet程序。</p>
+<h2 id="servlet的生命周期（运行过程）"><a href="#servlet的生命周期（运行过程）" class="headerlink" title="servlet的生命周期（运行过程）"></a>servlet的生命周期（运行过程）</h2><h3 id="在下列时刻Servlet容器装载Servlet"><a href="#在下列时刻Servlet容器装载Servlet" class="headerlink" title="在下列时刻Servlet容器装载Servlet:"></a>在下列时刻Servlet容器装载Servlet:</h3></li>
+<li><p>方式一：Servlet容器启动时自动装载Servlet。需要在web.xml文件中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;Servlet&gt;</div><div class="line">    &lt;loadon-startup&gt;1&lt;/loadon-startup&gt;</div><div class="line">      &lt;!-- 数字越小优先级越高 --&gt;</div><div class="line">&lt;/Servlet</div></pre></td></tr></table></figure>
+</li>
+<li><p>方式二：客户端请求某个servlet，web服务器会接受该请求，然后根据请求来实例化某个servlet。</p>
+</li>
+<li>方式三： Servlet类文件被更新后，重新装载Servlet<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3>&emsp;&emsp;然后调用其内部的init()方法，进行初始化，并且只调用一次。  <h3 id="响应客户请求阶段"><a href="#响应客户请求阶段" class="headerlink" title="响应客户请求阶段"></a>响应客户请求阶段</h3>&emsp;&emsp;根据请求的数据提交方式，如果是get提交，调用doGet()方法，若post提交，调用doPost()方法。<h3 id="终止阶段"><a href="#终止阶段" class="headerlink" title="终止阶段"></a>终止阶段</h3>&emsp;&emsp;当web服务器关闭时，调用其destroy()方法来销毁该servlet。</li>
+</ul>
+<hr>
+<p>&emsp;&emsp;博主知识有限。如果有任何遗漏或者错误，欢迎指正！谢谢~~~<br>&emsp;&emsp;转载请注明出处！</p>
 
       
     </div>
@@ -204,11 +169,11 @@
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/hexo教程/">hexo教程</a>
+    <a class="article-category-link" href="/categories/Servlet/">Servlet</a>
 
       
   <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo安装/">hexo安装</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Servlet声明周期/">Servlet声明周期</a></li></ul>
 
       
         
@@ -238,19 +203,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/05/12/hexo入门学习（五）：绑定独立域名/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/19/Servlet基础（二）：Servlet与JSP/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
-          hexo入门学习（五）：绑定独立域名
+          Servlet基础（二）：Servlet与JSP
         
       </div>
     </a>
   
   
-    <a href="/2017/05/01/hexo入门学习（三）：主题设置/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/05/12/hexo入门学习（六）：文章图片存储到七牛云/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">hexo入门学习（三）：主题设置</div>
+      <div class="article-nav-title">hexo入门学习（六）：文章图片存储到七牛云</div>
     </a>
   
 </nav>
@@ -264,7 +229,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写作"><span class="nav-number">1.</span> <span class="nav-text">写作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#草稿"><span class="nav-number">2.</span> <span class="nav-text">草稿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入图片"><span class="nav-number">3.</span> <span class="nav-text">插入图片</span></a></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet简介"><span class="nav-number">1.</span> <span class="nav-text">Servlet简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#servlet的生命周期（运行过程）"><span class="nav-number">2.</span> <span class="nav-text">servlet的生命周期（运行过程）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在下列时刻Servlet容器装载Servlet"><span class="nav-number">2.1.</span> <span class="nav-text">在下列时刻Servlet容器装载Servlet:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">2.2.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应客户请求阶段"><span class="nav-number">2.3.</span> <span class="nav-text">响应客户请求阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#终止阶段"><span class="nav-number">2.4.</span> <span class="nav-text">终止阶段</span></a></li></ol></li></ol>
     
     </div>
   </aside>
