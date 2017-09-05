@@ -1,0 +1,387 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>java常用排序总结（七种） | ActiveBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="求职java常用排序总结" />
+  
+  
+  
+  
+  <meta name="description" content="&amp;emsp;&amp;emsp;排序算法可以分为内部排序和外部排序，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。 &amp;emsp;&amp;emsp;常见的内部排序算法有：插入排序、希尔排序、选择排序、冒泡排序、归并排序、快速排序、堆排序、基数排序(笔者对其算法实现没有弄明白，在后面文章中补上)等。">
+<meta name="keywords" content="求职,java常用排序总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java常用排序总结（七种）">
+<meta property="og:url" content="http://yoursite.com/2017/09/05/java常用排序总结（七种）/index.html">
+<meta property="og:site_name" content="ActiveBlog">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;排序算法可以分为内部排序和外部排序，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。 &amp;emsp;&amp;emsp;常见的内部排序算法有：插入排序、希尔排序、选择排序、冒泡排序、归并排序、快速排序、堆排序、基数排序(笔者对其算法实现没有弄明白，在后面文章中补上)等。">
+<meta property="og:image" content="http://osz73wqbv.bkt.clouddn.com/sort/%E6%8E%92%E5%BA%8F.png">
+<meta property="og:image" content="http://osz73wqbv.bkt.clouddn.com//sort/insert-sort.gif">
+<meta property="og:image" content="http://osz73wqbv.bkt.clouddn.com//sort/shellsort_anim.gif">
+<meta property="og:image" content="http://osz73wqbv.bkt.clouddn.com//sort/selection_sort_animation.gif">
+<meta property="og:image" content="http://osz73wqbv.bkt.clouddn.com//sort/Sorting_heapsort_anim.gif">
+<meta property="og:image" content="http://osz73wqbv.bkt.clouddn.com//sort/bubble_sort_animation.gif">
+<meta property="og:image" content="http://osz73wqbv.bkt.clouddn.com//sort/Sorting_quicksort_anim.gif">
+<meta property="og:image" content="http://osz73wqbv.bkt.clouddn.com//sort/merge_sort_animation2.gif">
+<meta property="og:image" content="http://osz73wqbv.bkt.clouddn.com//sort/sort_table.jpg">
+<meta property="og:updated_time" content="2017-09-05T05:16:07.260Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java常用排序总结（七种）">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;排序算法可以分为内部排序和外部排序，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。 &amp;emsp;&amp;emsp;常见的内部排序算法有：插入排序、希尔排序、选择排序、冒泡排序、归并排序、快速排序、堆排序、基数排序(笔者对其算法实现没有弄明白，在后面文章中补上)等。">
+<meta name="twitter:image" content="http://osz73wqbv.bkt.clouddn.com/sort/%E6%8E%92%E5%BA%8F.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ActiveBlog" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/ActiveBlog.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<script>
+  function(){
+    if('{{ page.password }}'){
+      if (prompt('请输入文章密码','') !== '{{ page.password }}'){
+        alert('密码错误！');
+        history.back();
+      }
+    }
+  }
+</script>
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="ActiveBlog" rel="home"> ActiveBlog </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Action speak louder than words.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-java常用排序总结（七种）" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      java常用排序总结（七种）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/09/05/java常用排序总结（七种）/" class="article-date">
+	  <time datetime="2017-09-05T05:14:18.000Z" itemprop="datePublished">九月 5, 2017</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/java知识总结/">java知识总结</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp;&emsp;排序算法可以分为内部排序和外部排序，内部排序是数据记录在内存中进行排序，而外部排序是因排序的数据很大，一次不能容纳全部的排序记录，在排序过程中需要访问外存。</p>
+<p>&emsp;&emsp;常见的内部排序算法有：插入排序、希尔排序、选择排序、冒泡排序、归并排序、快速排序、堆排序、基数排序(笔者对其算法实现没有弄明白，在后面文章中补上)等。<br><a id="more"></a><br><img src="http://osz73wqbv.bkt.clouddn.com/sort/%E6%8E%92%E5%BA%8F.png" alt="排序分类"></p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h3 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h3><p><img src="http://osz73wqbv.bkt.clouddn.com//sort/insert-sort.gif" alt="直接插入排序示意图"></p>
+<p>&emsp;&emsp;将一个待排序的记录按其关键字的大小插到前面已经排序的序列中的适当位置，直到全部记录插入完毕为止。   </p>
+<p>算法实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertionUp</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</div><div class="line">		 <span class="keyword">if</span>((array==<span class="keyword">null</span>)||(array.length==<span class="number">0</span>))</div><div class="line">		        <span class="keyword">return</span>;</div><div class="line">		 <span class="comment">//排序整个数组</span></div><div class="line">		 <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;array.length;i++)<span class="comment">//第0位独自作为有序数列，从第1位开始向后遍历</span></div><div class="line">	        &#123;</div><div class="line">	            <span class="keyword">if</span>(array[i]&lt;array[i-<span class="number">1</span>])<span class="comment">//0~i-1位为有序，若第i位小于i-1位，继续寻位并插入，否则认为0~i位也是有序的，忽略此次循环，相当于continue</span></div><div class="line">	            &#123;</div><div class="line">	                <span class="keyword">int</span> temp=array[i];<span class="comment">//保存第i位的值</span></div><div class="line">	                <span class="keyword">int</span> k = i - <span class="number">1</span>;</div><div class="line">	                <span class="keyword">for</span>(<span class="keyword">int</span> j=k;j&gt;=<span class="number">0</span> &amp;&amp; temp&lt;array[j];j--)<span class="comment">//从第i-1位向前遍历并移位，直至找到小于第i位值停止</span></div><div class="line">	                &#123;</div><div class="line">	                    array[j+<span class="number">1</span>]=array[j];</div><div class="line">	                    k--;</div><div class="line">	                &#125;</div><div class="line">	                array[k+<span class="number">1</span>]=temp;<span class="comment">//插入第i位的值</span></div><div class="line">	            &#125;</div><div class="line">	        &#125; </div><div class="line">		 </div><div class="line">	 &#125;</div></pre></td></tr></table></figure>
+<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p><img src="http://osz73wqbv.bkt.clouddn.com//sort/shellsort_anim.gif" alt="希尔排序示意图"></p>
+<p>&emsp;&emsp;希尔排序，也称递减增量排序算法，是插入排序的一种更高效的改进版本。但希尔排序是非稳定排序算法。</p>
+<p>&emsp;&emsp;希尔排序的基本思想是：先取一个小于n的整数d1作为第一个增量，把文件的全部记录分组。所有距离为d1的倍数的记录放在同一个组中。先在各组内进行直接插入排序；然后，取第二个增量d2&lt;d1重复上述的分组和排序，直至所取的增量  =1(  &lt;  …&lt;d2&lt;d1)，即所有记录放在同一组中进行直接插入排序为止。</p>
+<p>算法实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">public static void ShellUp(int[] array)&#123;</div><div class="line">		 if((array==null)||(array.length==0))</div><div class="line">		        return;</div><div class="line">	        int d=array.length;//增量初始值。使用时一般为d/2。</div><div class="line">            while(true)</div><div class="line">            &#123;</div><div class="line">                d=d/2;</div><div class="line">                for(int x=0;x&lt;d;x++)</div><div class="line">                &#123;</div><div class="line">                    for(int i=x+d;i&lt;array.length;i=i+d)</div><div class="line">                    &#123;</div><div class="line">                        int temp=array[i];</div><div class="line">                        int j;</div><div class="line">                        for(j=i-d;j&gt;=0&amp;&amp;array[j]&gt;temp;j=j-d)</div><div class="line">                        &#123;</div><div class="line">                        	array[j+d]=array[j];</div><div class="line">                        &#125;</div><div class="line">                        array[j+d]=temp;</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">                if(d==1)</div><div class="line">                &#123;</div><div class="line">                    break;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h2 id="选择排序-Selection-sort"><a href="#选择排序-Selection-sort" class="headerlink" title="选择排序(Selection sort)"></a>选择排序(Selection sort)</h2><h3 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h3><p><img src="http://osz73wqbv.bkt.clouddn.com//sort/selection_sort_animation.gif" alt="简单选择排序示意图"></p>
+<p>&emsp;&emsp;简单选择排序也是一种简单直观的排序算法。<br>算法实现：</p>
+<p>优化的算法：每次遍历查找最大和最小两个数据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public static void selectUp(int[] array)&#123;</div><div class="line">	int min ,max ,tmp;//定义两个变量</div><div class="line">	int len = array.length;</div><div class="line">	if((array==null)||(array.length==0))</div><div class="line">        return;</div><div class="line">	 for (int i=1 ;i &lt;= len/2;i++) &#123; </div><div class="line">		  // 做不超过n/2趟选择排序   </div><div class="line">		 min = i; max = i ; //分别记录最大和最小关键字记录位置</div><div class="line">		 for (int j= i+1; j&lt;= len-i; j++) &#123;</div><div class="line">		    if (array[j] &gt; array[max]) &#123;   </div><div class="line">	                max = j ; continue ;   </div><div class="line">	            &#125;    </div><div class="line">	            if (array[j]&lt; array[min]) &#123;   </div><div class="line">	                min = j ;   </div><div class="line">	            &#125;     </div><div class="line">		 &#125;</div><div class="line">		 //该交换操作还可分情况讨论以提高效率  </div><div class="line">	      tmp = array[i-1]; array[i-1] = array[min]; array[min] = tmp;  </div><div class="line">	      tmp = array[len-i]; array[len-i] = array[max]; array[max] = tmp;   </div><div class="line">	  </div><div class="line">	 &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3><p><img src="http://osz73wqbv.bkt.clouddn.com//sort/Sorting_heapsort_anim.gif" alt="堆排序示意图"></p>
+<p>&emsp;&emsp;堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点<br>&emsp;&emsp;堆排序的平均时间复杂度为Ο(nlogn) 。<br>算法实现：（以大顶为例）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">//堆排序</div><div class="line">//大顶堆</div><div class="line">	 public static int[] bigHeap(int[] array)&#123;</div><div class="line">		 array = heapUp(array); //初始建堆，array[0]为第一趟值最大的元素</div><div class="line">		 for(int i=array.length-1;i&gt;1;i--)&#123;  </div><div class="line">		 	int temp = array[0];  //将堆顶元素和堆低元素交换，即得到当前最大元素正确的排序位置</div><div class="line">		 	array[0] = array[i];</div><div class="line">		 	array[i] = temp;</div><div class="line">		 	adjustDownToUp(array, 0,i);  //整理，将剩余的元素整理成堆</div><div class="line">		 &#125;</div><div class="line">		return array;</div><div class="line">	&#125;</div><div class="line">	private static int[] heapUp(int[] array)&#123;</div><div class="line">		 //从最后一个节点array.length-1的父节点（array.length-1-1）/2开始，直到根节点0，反复调整堆</div><div class="line">		 for(int i=(array.length-2)/2;i&gt;=0;i--)&#123; </div><div class="line">			 adjustDownToUp(array, i,array.length);</div><div class="line">		 &#125;</div><div class="line">		 return array;</div><div class="line">	&#125;</div><div class="line">	private static void adjustDownToUp(int[] array, int k, int length) &#123;</div><div class="line">		// TODO Auto-generated method stub</div><div class="line">		 int temp = array[k];   </div><div class="line">		 for(int i=2*k+1; i&lt;length-1; i=2*i+1)&#123;    //i为初始化为节点k的左孩子，沿节点较大的子节点向下调整</div><div class="line">			 if(i&lt;length &amp;&amp; array[i]&lt;array[i+1])&#123;  //取节点较大的子节点的下标</div><div class="line">				 i++;   //如果节点的右孩子&gt;左孩子，则取右孩子节点的下标</div><div class="line">			 &#125;</div><div class="line">			 if(temp&gt;=array[i])&#123;  //根节点 &gt;=左右子女中关键字较大者，调整结束</div><div class="line">				 break;</div><div class="line">			 &#125;else&#123;   //根节点 &lt;左右子女中关键字较大者</div><div class="line">			 	array[k] = array[i];  //将左右子结点中较大值array[i]调整到双亲节点上</div><div class="line">			 	k = i; //【关键】修改k值，以便继续向下调整</div><div class="line">			 &#125;</div><div class="line">		 &#125;</div><div class="line">		 array[k] = temp;  //被调整的结点的值放入最终位置</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h2 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p><img src="http://osz73wqbv.bkt.clouddn.com//sort/bubble_sort_animation.gif" alt="冒泡排序示意图">    </p>
+<p>&emsp;&emsp;冒泡排序（Bubble Sort）也是一种简单直观的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。</p>
+<p>算法实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">public static void bubbleUp(int[] array)&#123;</div><div class="line">		int temp = 0;</div><div class="line">		boolean exchange = true;//若某次冒泡没有变化，则说明有序，停止循环</div><div class="line">        for (int i = array.length - 1; i &gt; 0&amp;&amp;exchange; --i)</div><div class="line">        &#123;</div><div class="line">        	exchange = false;</div><div class="line">            for (int j = 0; j &lt; i; ++j)</div><div class="line">            &#123;</div><div class="line">                if (array[j + 1] &lt; array[j])</div><div class="line">                &#123;</div><div class="line">                	exchange = true;</div><div class="line">                    temp = array[j];</div><div class="line">                    array[j] = array[j + 1];</div><div class="line">                    array[j + 1] = temp;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p><img src="http://osz73wqbv.bkt.clouddn.com//sort/Sorting_quicksort_anim.gif" alt="快速排序示意图"><br>&emsp;&emsp;快速排序是由东尼·霍尔所发展的一种排序算法。在平均状况下，排序 n 个项目要Ο(n log n)次比较。在最坏状况下则需要Ο(n2)次比较，但这种状况并不常见。事实上，快速排序通常明显比其他Ο(n log n) 算法更快，因为它的内部循环（inner loop）可以在大部分的架构上很有效率地被实现出来。<br>基本思想是：<br>&emsp;&emsp;通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">public static  void quickUp(int[] array)&#123;</div><div class="line">	if(array.length &gt; 8)   //数组长度短，可以选择其它排序方法</div><div class="line">       &#123;</div><div class="line">		quickSort(array, 0, array.length-1);</div><div class="line">       &#125;else if(array.length &gt;0)&#123;//查看数组是否为空</div><div class="line">       	bubbleUp(array);</div><div class="line">       &#125;</div><div class="line">&#125;</div><div class="line">/**</div><div class="line"> * 查找出中轴（默认是最低位low）的在numbers数组排序后所在位置</div><div class="line"> * </div><div class="line">    * @param array 待查找数组</div><div class="line">    * @param low   开始位置</div><div class="line">    * @param high  结束位置</div><div class="line">    * @return  中轴所在位置</div><div class="line">    */</div><div class="line">   private static int getMiddle(int[] array, int low,int high)</div><div class="line">   &#123;</div><div class="line">       int temp = array[low]; //数组的第一个作为中轴</div><div class="line">       while(low &lt; high)</div><div class="line">       &#123;</div><div class="line">       	while(low &lt; high &amp;&amp; array[high] &gt;= temp)</div><div class="line">       		high--;</div><div class="line">       	array[low] = array[high] ;</div><div class="line">        while(low &lt; high &amp;&amp; array[low] &lt; temp)</div><div class="line">            low++;</div><div class="line">        array[high] = array[low] ;</div><div class="line">    &#125;</div><div class="line">    array[low] = temp ; //中轴记录到尾</div><div class="line">       return low ; // 返回中轴的位置</div><div class="line">   &#125;</div><div class="line">   /**</div><div class="line">    * </div><div class="line">    * @param array 待排序数组</div><div class="line">    * @param low  开始位置</div><div class="line">    * @param high 结束位置</div><div class="line">    */</div><div class="line">   private static void quickSort(int[] array,int low,int high)</div><div class="line">   &#123;</div><div class="line">       if(low &lt; high)</div><div class="line">       &#123;</div><div class="line">       	int middle = getMiddle(array,low,high); //将numbers数组进行一分为二</div><div class="line">       	quickSort(array, low, middle-1);   //对低字段表进行递归排序</div><div class="line">       	quickSort(array, middle+1, high); //对高字段表进行递归排序</div><div class="line">       &#125;</div><div class="line">   </div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p><img src="http://osz73wqbv.bkt.clouddn.com//sort/merge_sort_animation2.gif" alt="归并排序示意图">   </p>
+<p>&emsp;&emsp;（Merge）排序法是将两个（或两个以上）有序表合并成一个新的有序表，即把待排序序列分为若干个子序列，每个子序列是有序的。然后再把有序子序列合并为整体有序序列。</p>
+<p>算法步骤：</p>
+<ol>
+<li>申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序。</li>
+<li>设定两个指针，最初位置分别为两个已经排序序列的起始位置。</li>
+<li>比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置。</li>
+<li>重复步骤3直到某一指针达到序列尾。</li>
+<li>将另一序列剩下的所有元素直接复制到合并序列尾。</li>
+</ol>
+<p>算法实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">/** </div><div class="line"> * 归并排序 </div><div class="line"> * 简介:将两个（或两个以上）有序表合并成一个新的有序表 即把待排序序列分为若干个子序列，每个子序列是有序的。然后再把有序子序列合并为整体有序序列 </div><div class="line"> * 时间复杂度为O(nlogn) </div><div class="line"> * 稳定排序方式 </div><div class="line"> * @param array 待排序数组 </div><div class="line"> * @param low  low和high中low为0，high为array.length-1; </div><div class="line"> * @param high 数组长度</div><div class="line"> * 	</div><div class="line"> */  </div><div class="line">public static int[] mergeUp(int[] array, int low, int high) &#123; </div><div class="line">    int mid = (low + high) / 2;  </div><div class="line">    if (low &lt; high) &#123;  </div><div class="line">        // 左边  </div><div class="line">        mergeUp(array, low, mid);  </div><div class="line">        // 右边  </div><div class="line">        mergeUp(array, mid + 1, high);  </div><div class="line">        // 左右归并  </div><div class="line">        merge(array, low, mid, high);  </div><div class="line">    &#125;  </div><div class="line">    return array;  </div><div class="line">&#125;  </div><div class="line">  </div><div class="line">public static void merge(int[] nums, int low, int mid, int high) &#123;  </div><div class="line">    int[] temp = new int[high - low + 1];  </div><div class="line">    int i = low;// 左指针  </div><div class="line">    int j = mid + 1;// 右指针  </div><div class="line">    int k = 0;  </div><div class="line">  </div><div class="line">    // 把较小的数先移到新数组中  </div><div class="line">    while (i &lt;= mid &amp;&amp; j &lt;= high) &#123;  </div><div class="line">        if (nums[i] &lt; nums[j]) &#123;  </div><div class="line">            temp[k++] = nums[i++];  </div><div class="line">        &#125; else &#123;  </div><div class="line">            temp[k++] = nums[j++];  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    // 把左边剩余的数移入数组  </div><div class="line">    while (i &lt;= mid) &#123;  </div><div class="line">        temp[k++] = nums[i++];  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    // 把右边边剩余的数移入数组  </div><div class="line">    while (j &lt;= high) &#123;  </div><div class="line">        temp[k++] = nums[j++];  </div><div class="line">    &#125;  </div><div class="line">  </div><div class="line">    // 把新数组中的数覆盖nums数组  </div><div class="line">    for (int k2 = 0; k2 &lt; temp.length; k2++) &#123;  </div><div class="line">        nums[k2 + low] = temp[k2];  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://osz73wqbv.bkt.clouddn.com//sort/sort_table.jpg" alt="image"></p>
+<hr>
+<p>笔者知识有限，有疑问或者错误，欢迎留言或者邮件告知。</p>
+
+      
+    </div>
+
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/java知识总结/">java知识总结</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java常用排序总结/">java常用排序总结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/求职/">求职</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTM5MS81OTU5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+		       if (typeof LivereTower === 'function') { return; }
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div> 
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/31/ArrayList简介及扩容机制/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">ArrayList简介及扩容机制</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">1.</span> <span class="nav-text">插入排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直接插入排序"><span class="nav-number">1.1.</span> <span class="nav-text">直接插入排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#希尔排序"><span class="nav-number">1.2.</span> <span class="nav-text">希尔排序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序-Selection-sort"><span class="nav-number">2.</span> <span class="nav-text">选择排序(Selection sort)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单选择排序"><span class="nav-number">2.1.</span> <span class="nav-text">简单选择排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆排序"><span class="nav-number">2.2.</span> <span class="nav-text">堆排序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交换排序"><span class="nav-number">3.</span> <span class="nav-text">交换排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-number">3.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-number">3.2.</span> <span class="nav-text">快速排序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">4.</span> <span class="nav-text">归并排序</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 ActiveBlog All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+
+  </div>
+</footer>
+
+<!--再div中标注主题出处  -->
+ <!-- <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+    
+-->
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262565482'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1262565482%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
